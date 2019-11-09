@@ -1,6 +1,6 @@
-# Broker MQTT
+# Broker MQTT :desktop_computer:
 
-Este repositório mostra um Broker MQTT básico construído usando Nodejs e MQTT.js
+:octocat: Este repositório mostra um Broker MQTT básico construído usando Nodejs e MQTT.js
 
 --- 
 # Configurando e preparando o ambiente
@@ -120,7 +120,7 @@ client.on("message",(topic,payload,packet) => {
     console.log("This message/payload: " + payload.toString());
 });
 ```
-O `topic` já é uma string, mas o payload é um *Buffer*, sendo necessário a conversão para string para podermos ter o seguinte output: 
+O `topic` já é uma string, mas o `payload` é um *Buffer*, sendo necessário a conversão para string para podermos ter o seguinte output: 
 ```bash
 This topic: topic
 This message/payload: message from topic
@@ -128,9 +128,9 @@ This message/payload: message from topic
 
 ## Realizar `publishes`
 
-`Publishes` servem para publicarmos informações no nosso servidor mqtt. No nosso `publish` é necessário que haja um topic e um payload.
+`Publishes` servem para publicarmos informações no nosso servidor mqtt. No nosso `publish` é necessário que haja um `topic` e um `payload`.
 ```javascript
-client.publish("topic","message");
+client.publish("topic","payload");
 ```
 > Caso você realize um `publish` em um `topic` que o seu broker fez um `subscribe`, o seu broker também irá receber o seu publish.
 
